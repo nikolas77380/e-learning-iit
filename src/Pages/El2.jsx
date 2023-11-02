@@ -4,7 +4,7 @@ import "./style.css";
 
 const EL2 = () => {
   return (
-    <Grid container spacing={3} className="landing-page">
+    <Grid container spacing={3} className="el2-page">
       <Grid item xs={12} md={12}>
         <Typography>
           <h1 className="El2h1">

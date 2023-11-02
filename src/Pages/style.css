@@ -1,6 +1,7 @@
-.landing-page {
+.el2-page {
   background-color: #412b14;
   align-items: center;
+  padding: 5rem 0;
 }
 
 .block {
@@ -10,7 +11,7 @@
   background-color: #000000;
   padding: 10px;
   box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.6);
-  margin: 20px;
+  margin: 1rem;
   max-width: 604px;
   min-height: 140px;
 }
@@ -27,4 +28,5 @@
   color: white;
   font-size: 70px;
   font-family: "Montserrat", sans-serif;
+  margin: 0;
 }
