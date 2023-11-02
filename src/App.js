@@ -7,7 +7,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <MainButton buttonText='почати навчання прямо зараз'/>
+        <MainButton 
+        text='почати навчання прямо зараз'
+        width={561}
+        height={82}/>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
