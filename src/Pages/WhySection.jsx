@@ -1,18 +1,16 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import Grid from "@mui/material";
 import "./style.css";
 
 const EL2 = () => {
   return (
     <Grid container spacing={3} className="el2-page">
       <Grid item xs={12} md={12}>
-        <Typography>
-          <h1 className="El2h1">
-            ЧОМУ ТОБІ ПОТРІБЕН
-            <br />
-            ЦЕЙ КУРС?
-          </h1>
-        </Typography>
+        <h1 className="El2h1">
+          ЧОМУ ТОБІ ПОТРІБЕН
+          <br />
+          ЦЕЙ КУРС?
+        </h1>
       </Grid>
       <Grid item xs={12} md={6}>
         <div className="block">
