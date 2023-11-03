@@ -1,8 +1,8 @@
 import React from "react";
-import Grid from "@mui/material";
+import { Grid } from "@mui/material";
 import "./style.css";
 
-const EL2 = () => {
+const WhySection = () => {
   return (
     <Grid container spacing={3} className="el2-page">
       <Grid item xs={12} md={12}>
@@ -48,4 +48,4 @@ const EL2 = () => {
   );
 };
 
-export default EL2;
+export default WhySection;

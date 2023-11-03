@@ -3,7 +3,7 @@ import { Typography, Grid } from "@mui/material";
 import MainButton from "../components/MainButton";
 import "./style.css";
 
-const EL1 = () => {
+const HeroSection = () => {
   return (
     <Grid
       container
@@ -55,4 +55,4 @@ const EL1 = () => {
   );
 };
 
-export default EL1;
+export default HeroSection;
