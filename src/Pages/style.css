@@ -37,23 +37,24 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top 40%;
-  height: 1085px;
+  height: 850px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.el1-block {
+.el1-block,
+.el1-block1 {
   display: flex;
-  flex-direction: column;
-  align-items: end;
   text-align: center;
-  height: 15rem;
+  height: 13rem;
+  align-items: flex-start;
+  align-content: space-around;
 }
 
 .el1-title {
   color: #613d2a;
-  font-family: "Aclonica", sans-serif;
+  font-family: "Aclonica";
   font-size: 70px;
   margin: 20px;
   align-items: center;
@@ -62,9 +63,39 @@
 .el1-salary-text {
   font-family: "Montserrat", sans-serif;
   font-size: 96px;
-  margin-top: 100rem;
+  margin-top: 50rem;
 }
 
 .salary-text {
   margin-left: 2rem;
+}
+.el-hr {
+  width: 8rem;
+  position: absolute;
+  left: 23rem;
+  border: 2px solid red;
+  top: 45.5rem;
+  transform: rotate(15deg);
+  transform-origin: 0 0;
+}
+.el-hr1 {
+  width: 8rem;
+  position: absolute;
+  left: 23rem;
+  border: 2px solid red;
+  top: 47.5rem;
+  transform: rotate(-15deg);
+  transform-origin: 0 0;
+}
+@media (max-width: 600px) {
+  .el-hr {
+    top: 39rem;
+    left: 16rem;
+    width: 8rem;
+  }
+  .el-hr1 {
+    top: 41rem;
+    left: 16rem;
+    width: 8rem;
+  }
 }
