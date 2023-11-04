@@ -16,7 +16,7 @@ const WhyComponents = () => {
           style={{
             display: "flex",
             margin: "1rem",
-            maxWidth: "45%",
+            maxWidth: "470px",
             height: "9rem",
             alignContent: "center",
           }}

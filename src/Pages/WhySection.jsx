@@ -21,6 +21,7 @@ const WhySection = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          flexWrap: "wrap",
         }}
       >
         <MainTitle
@@ -30,8 +31,8 @@ const WhySection = () => {
             color: "#FFFFFF",
             fontSize: "70px",
             textAlign: "center",
-            width: "55rem",
             marginTop: "2rem",
+            display: "flex",
           }}
         />
       </Grid>
