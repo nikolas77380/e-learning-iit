@@ -1,16 +1,15 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import { Button } from "@mui/material";
-import WhySection from "../Pages/WhySection";
 import HeroSection from "../Pages/HeroSection";
+import WhySection from "../Pages/WhySection";
 
 function Main() {
   return (
     <Grid container>
-      <Grid item xs={12} md={12}>
+      <Grid item>
         <HeroSection />
       </Grid>
-      <Grid item xs={12} md={12}>
+      <Grid item>
         <WhySection />
       </Grid>
     </Grid>

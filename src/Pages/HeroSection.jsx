@@ -1,66 +1,73 @@
 import React from "react";
-import { Typography, Grid } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import MainButton from "../components/MainButton";
-import MainTitle from "../components/MainTitle";
 import "./style.css";
 
 const HeroSection = () => {
   return (
     <>
-      <Grid container className="el1-container">
+      <Grid container className="hero-container">
         <Grid
           item
-          xs={11}
-          md={11}
+          xs={12}
+          md={6}
           className="el1-block1"
           sx={{
-            marginTop: {
-              xs: "-4rem",
-              md: "10rem",
-            },
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "1rem",
           }}
         >
-          <MainTitle
-            text={"FRONT-END РОЗРОБНИК З 0"}
-            sx={{ fontFamily: "Aclonica", color: "#613D2A", width: "35rem" }}
-          />
+          <h2
+            style={{
+              fontFamily: "Aclonica",
+              color: "#613D2A",
+              fontSize: "3.5rem",
+              textAlign: "center",
+              textTransform: "uppercase",
+            }}
+          >
+            Front-end розробник з 0
+          </h2>
         </Grid>
         <Grid
           item
-          xs={11}
+          xs={12}
           md={12}
           className="el1-block"
           sx={{
             justifyContent: "space-around",
             flexWrap: "wrap",
-            marginTop: "15rem",
+            marginTop: "17rem",
+            alignContent: "center",
           }}
         >
-          <div style={{ display: "flex", alignItems: "flex-end" }}>
-            <Typography
-              variant="h1"
-              className="el1-salary-text"
-              sx={{ color: "red" }}
-            >
-              <b>199$</b>
-            </Typography>
-            <Typography
-              variant="h2"
-              className="el1-salary-text-small"
-              sx={{ color: "black" }}
-            >
-              <span className="salary-text">800$</span>
-            </Typography>
-            <hr style={{}} className="el-hr" />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "flex-end",
+              position: "relative",
+            }}
+          >
+            <div className="el1-salary-container">
+              <span className="el1-salary-text">
+                <b>199$</b>
+              </span>
+            </div>
+
+            <span className="salary-text">800$</span>
+
+            <hr className="el-hr" />
             <hr className="el-hr1" />
           </div>
           <MainButton
             text="почати навчання прямо зараз"
             sx={{
-              width: "41px",
-
-              fontSize: "40px",
-              lineHeight: "36.5px",
+              width: "26.5rem",
+              height: "9.5rem",
+              fontSize: "2.5rem",
+              lineHeight: "2.3rem",
               padding: "2px",
             }}
           />
