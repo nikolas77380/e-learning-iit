@@ -22,14 +22,14 @@ const iconLinksDesctop = [
 ];
 
 const iconLinksMobile = [
-    { url: 'https://git-scm.com', icon: git, width: 154, height:131 },
-    { url: 'https://en.wikipedia.org/wiki/JavaScript', icon: js, width: 150, height:133 },
-    { url: 'https://legacy.reactjs.org', icon: react, width: 146, height:145 },
-    { url: 'https://en.wikipedia.org/wiki/HTML ', icon: html, width: 132, height:132 },
-    { url: 'https://en.wikipedia.org/wiki/CSS', icon: css, width: 135, height:125 },
-    { url: 'https://getbootstrap.com', icon: bootstrap, width: 169, height:162 },
-    { url: 'https://github.com/', icon: github, width: 154, height:131 },
-    { url: 'https://mui.com/', icon: mui, width: 150, height:133 }
+    { url: 'https://git-scm.com', icon: git, width: 119, height:109 },
+    { url: 'https://en.wikipedia.org/wiki/JavaScript', icon: js, width: 102, height:86 },
+    { url: 'https://legacy.reactjs.org', icon: react, width: 89, height:92 },
+    { url: 'https://en.wikipedia.org/wiki/HTML ', icon: html, width: 88, height:82 },
+    { url: 'https://en.wikipedia.org/wiki/CSS', icon: css, width: 86, height:87 },
+    { url: 'https://getbootstrap.com', icon: bootstrap, width: 106, height:106 },
+    { url: 'https://github.com/', icon: github, width: 98, height:87 },
+    { url: 'https://mui.com/', icon: mui, width: 93, height:98 }
   ];
 
 
@@ -38,8 +38,7 @@ function TechnologiesSectionEl5() {
     <div style={{
       backgroundImage: `url(${image})`,
       backgroundSize: 'cover',
-      height:'782px',
-      width:'100%',
+      height:'100vh',
       backgroundPosition:'center',
       display: 'flex',
       justifyContent: 'center',
@@ -47,7 +46,7 @@ function TechnologiesSectionEl5() {
         }}>
         <div style={{
             backgroundColor:' rgba(0, 0, 0, 0.3)',
-            height:'782px',
+            height:'100vh',
             width:'100%'
             }}>
                 <Grid container direction="column"
@@ -67,10 +66,21 @@ function TechnologiesSectionEl5() {
                             Які технології Ви вивчите
                     </h1>
         
-                    <Grid container spacing={1} direction="row" justifyContent="center" alignItems="center">
+                    <Grid sx={{ display: { md: 'flex', xs: 'none' } }} container spacing={1} direction="row" justifyContent="center" alignItems="center">
                         <Grid container spacing={8} item xs={8} md={6} direction="row" justifyContent="center" alignItems="center" >
                             {iconLinksDesctop.map((link, index) => (
                                 <Grid className='icon' key={index} item xs={4} direction="row" justifyContent="center" alignItems="center">
+                                     <a  href={link.url} target="_blank">
+                                         <img src={link.icon} alt={`Icon ${link.icon}`} style={{ width: link.width, height: link.height, display:'block', margin:'0 auto'}} />
+                                    </a>
+                                </Grid> 
+                            ))}
+                        </Grid>
+                    </Grid>
+                    <Grid sx={{marginTop:'120px', display: { md: 'none', xs: 'flex' } }} container spacing={1} direction="row" justifyContent="center" alignItems="center">
+                        <Grid container spacing={3} item xs={8} direction="row" justifyContent="center" alignItems="center" >
+                            {iconLinksMobile.map((link, index) => (
+                                <Grid className='icon' key={index} item xs={3} direction="row" justifyContent="center" alignItems="center" margin='5px'>
                                      <a  href={link.url} target="_blank">
                                          <img src={link.icon} alt={`Icon ${link.icon}`} style={{ width: link.width, height: link.height, display:'block', margin:'0 auto'}} />
                                     </a>
