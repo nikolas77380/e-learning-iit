@@ -9,8 +9,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <MainButton 
         text='почати навчання прямо зараз'
-        width={561}
-        height={82}/>
+        sx={{}}/>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
