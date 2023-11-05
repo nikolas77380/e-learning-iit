@@ -1,12 +1,13 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import { Button } from "@mui/material";
-import MainButton from "../components/MainButton";
-
+import CourseProgramm from "../Pages/CourseProgramm";
 
 function Main() {
-  return <Grid container>
-  </Grid>;
+  return (
+    <Grid container>
+      <CourseProgramm />
+    </Grid>
+  );
 }
 
 export default Main;
