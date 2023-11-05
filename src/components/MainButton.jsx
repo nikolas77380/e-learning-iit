@@ -6,11 +6,11 @@ export default function MainButton({text, onClickHandler, sx}) {
     backgroundColor: '#E8511C',
     fontFamily: 'Roboto',
     color: 'white',
-    borderRadius:'0',
-    boxShadow:'0px 4px 4px 0px #00000040',
+    borderRadius:0,
+    boxShadow:'0 .25rem .25rem 0 #00000040',
     fontWeight: '600',
     textAlign: 'center',
-    letterSpacing: '0em'
+    letterSpacing: 0
   };
   return (
       <Button 
