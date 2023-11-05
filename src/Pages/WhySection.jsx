@@ -2,15 +2,23 @@ import React from "react";
 import { Grid } from "@mui/material";
 import MainTitle from "../components/MainTitle";
 import WhyComponents from "../components/WhyComponents";
-import WhyText from "../constants/WhyConstants";
 import "./style.css";
 
 const WhySection = () => {
+  const whtTitle = {
+    fontFamily: "Montserrat",
+    color: "#FFFFFF",
+    fontSize: "70px",
+    textAlign: "center",
+    marginTop: "2rem",
+    display: "flex",
+    textTransform: "uppercase",
+  };
   return (
     <Grid
       container
       spacing={3}
-      className="el2-page"
+      className="why-page"
       sx={{ display: "flex", alignContent: "center" }}
     >
       <Grid
@@ -24,17 +32,7 @@ const WhySection = () => {
           flexWrap: "wrap",
         }}
       >
-        <MainTitle
-          text={"ЧОМУ ТОБІ ПОТРІБЕН ЦЕЙ КУРС?"}
-          sx={{
-            fontFamily: "Montserrat",
-            color: "#FFFFFF",
-            fontSize: "70px",
-            textAlign: "center",
-            marginTop: "2rem",
-            display: "flex",
-          }}
-        />
+        <MainTitle text={"ЧОМУ ТОбІ ПОТРІБЕН ЦЕЙ КУРС?"} sx={whtTitle} />
       </Grid>
       <Grid
         container

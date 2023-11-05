@@ -10,7 +10,7 @@ const HeroSection = () => {
         item
         xs={12}
         md={6}
-        className="el1-block1"
+        className="hero-block1"
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -34,7 +34,7 @@ const HeroSection = () => {
         item
         xs={12}
         md={12}
-        className="el1-block"
+        className="hero-block"
         sx={{
           justifyContent: "space-around",
           flexWrap: "wrap",
@@ -49,8 +49,8 @@ const HeroSection = () => {
             position: "relative",
           }}
         >
-          <div className="el1-salary-container">
-            <span className="el1-salary-text">
+          <div className="hero-salary-container">
+            <span className="hero-salary-text">
               <b>199$</b>
             </span>
           </div>
