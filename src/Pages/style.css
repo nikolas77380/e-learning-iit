@@ -1,7 +1,7 @@
+/* EL2-why-section.css */
 .why-page {
   background-color: #412b14;
   align-items: center;
-  /* padding: 5rem 0; */
   margin: 0px;
   width: 100%;
 }
@@ -25,14 +25,10 @@
   font-size: 24px;
 }
 
-/* EL1.css */
+/* EL1-hero-section.css */
 .hero-container {
-  background-image: url("../images/hero.JPG");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top 35%;
   height: 52rem;
-  width: 100%;
+
   display: flex;
 }
 
@@ -46,6 +42,7 @@
   flex-wrap: wrap;
   margin-top: 27rem;
   align-content: center;
+  position: relative;
 }
 
 .hero-title {
@@ -84,4 +81,19 @@
   top: 5.7rem;
   transform: rotate(-15deg);
   transform-origin: 0 0;
+}
+.hero-background {
+  background-image: url("../images/hero.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top 37%;
+  height: 50.5rem;
+  width: 100%;
+  opacity: 0.3;
+  position: absolute;
+}
+@media (max-width: 600px) {
+  .hero-background {
+    opacity: 1;
+  }
 }

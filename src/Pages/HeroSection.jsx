@@ -4,8 +4,23 @@ import MainButton from "../components/MainButton";
 import "./style.css";
 
 const HeroSection = () => {
+  const h2style = {
+    fontFamily: "Aclonica",
+    color: "#613D2A",
+    fontSize: "3.5rem",
+    textAlign: "center",
+    textTransform: "uppercase",
+  };
+  const buttonStyle = {
+    width: "23.5rem",
+    height: "9.5rem",
+    fontSize: "2.5rem",
+    lineHeight: "2.3rem",
+    padding: "0.125rem",
+  };
   return (
     <Grid container className="hero-container">
+      <div className="hero-background"></div>
       <Grid
         item
         xs={12}
@@ -18,17 +33,7 @@ const HeroSection = () => {
           marginTop: "1rem",
         }}
       >
-        <h2
-          style={{
-            fontFamily: "Aclonica",
-            color: "#613D2A",
-            fontSize: "3.5rem",
-            textAlign: "center",
-            textTransform: "uppercase",
-          }}
-        >
-          Front-end розробник з 0
-        </h2>
+        <h2 style={h2style}>Front-end розробник з 0</h2>
       </Grid>
       <Grid
         item
@@ -60,16 +65,7 @@ const HeroSection = () => {
           <hr className="hero-hr" />
           <hr className="hero-hr1" />
         </div>
-        <MainButton
-          text="почати навчання прямо зараз"
-          sx={{
-            width: "26.5rem",
-            height: "9.5rem",
-            fontSize: "2.5rem",
-            lineHeight: "2.3rem",
-            padding: "0.125rem",
-          }}
-        />
+        <MainButton text="почати навчання прямо зараз" sx={buttonStyle} />
       </Grid>
     </Grid>
   );
