@@ -57,8 +57,8 @@ const HeroSection = () => {
 
           <span className="salary-text">800$</span>
 
-          <hr className="el-hr" />
-          <hr className="el-hr1" />
+          <hr className="hero-hr" />
+          <hr className="hero-hr1" />
         </div>
         <MainButton
           text="почати навчання прямо зараз"
@@ -67,7 +67,7 @@ const HeroSection = () => {
             height: "9.5rem",
             fontSize: "2.5rem",
             lineHeight: "2.3rem",
-            padding: "2px",
+            padding: "0.125rem",
           }}
         />
       </Grid>

@@ -25,13 +25,6 @@
   font-size: 24px;
 }
 
-.El2h1 {
-  text-align: center;
-  color: white;
-  font-size: 70px;
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-}
 /* EL1.css */
 .hero-container {
   background-image: url("../images/hero.JPG");
@@ -74,7 +67,7 @@
   font-size: 3.1rem;
 }
 
-.el-hr {
+.hero-hr {
   width: 7rem;
   position: absolute;
   left: 14.5rem;
@@ -83,7 +76,7 @@
   transform: rotate(15deg);
   transform-origin: 0 0;
 }
-.el-hr1 {
+.hero-hr1 {
   width: 7rem;
   position: absolute;
   left: 14.3rem;
