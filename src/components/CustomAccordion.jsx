@@ -24,6 +24,7 @@ function CustomAccordion({ items }) {
             expandIcon={<ExpandMoreIcon />}
             aria-controls={`panel${index}-content`}
             id={`panel${index}-header`}
+            sx={{ backgroundColor: "#F3F3F3" }}
           >
             <Typography>{item.title}</Typography>
           </AccordionSummary>
