@@ -36,11 +36,11 @@ const mainImageStyle = {
 
 const titleStyle = {
    fontSize: { md: '4.5rem', xs: '3.5rem' }, 
-   margin:'20px',
+   margin:'1.25rem',
    fontFamily: 'Montserrat',
    fontWeight: '700',
-   lineHeight: '85px',
-   letterSpacing: '1px',
+   lineHeight: '5.3125rem',
+   letterSpacing: '.0625rem',
    textAlign: 'center',
    color:'white',
    textTransform:'uppercase'
@@ -59,7 +59,7 @@ function TechnologiesSection() {
                 <Grid container direction="column"
                     justifyContent="flex-start"
                     alignItems="center">
-                      <Grid md={6} margin='60px'>
+                      <Grid md={6} margin='3.75rem'>
                         <Typography  sx={titleStyle}>
                               Які технології Ви вивчите
                         </Typography>
