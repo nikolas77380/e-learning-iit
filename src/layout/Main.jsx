@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import WhySection from "../Pages/WhySection";
-import HeroSection from "../Pages/HeroSection";
+import WhySection from "../pages/WhySection";
+import HeroSection from "../pages/HeroSection";
 
 function Main() {
   return (
