@@ -9,7 +9,7 @@ function CourseProgramm() {
   return (
     <Grid
       container
-      sx={{ display: "flex", justifyContent: "center", margin: "2rem" }}
+      sx={{ display: "flex", justifyContent: "center", margin: " 1rem 0" }}
     >
       <Grid item xs={12}>
         <MainTitle
@@ -18,13 +18,13 @@ function CourseProgramm() {
             color: "#613D2A",
             textAlign: "center",
             textTransform: "uppercase",
-            fontSize: "4rem",
+            fontSize: "3.9rem",
             fontWeight: "bold",
           }}
           text={"Програма курсу"}
         />
       </Grid>
-      <Grid item xs={11} md={10} sx={{ marginTop: "3rem" }}>
+      <Grid item xs={11} md={10} sx={{ marginTop: "2rem" }}>
         <CustomAccordion items={items} multiple />
       </Grid>
       <Grid
