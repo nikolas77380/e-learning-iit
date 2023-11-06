@@ -22,7 +22,7 @@ function CourseProgramm() {
         </Typography>
       </Grid>
       <Grid item xs={11} md={10} sx={{ marginTop: "3rem" }}>
-        <CustomAccordion items={items} multiple={true} />
+        <CustomAccordion items={items} multiple />
       </Grid>
       <Grid
         item

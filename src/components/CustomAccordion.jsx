@@ -8,15 +8,15 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 function CustomAccordion({ items, multiple }) {
   const [expanded, setExpanded] = useState(multiple ? [] : null);
 
-  const handleChange = (panel) => (event, isExpanded) => {
+  const handleChange = (panel) => (event, expandedItem) => {
     if (multiple) {
       setExpanded((prevExpanded) =>
-        isExpanded
+        expandedItem
           ? [...prevExpanded, panel]
           : prevExpanded.filter((item) => item !== panel)
       );
     } else {
-      setExpanded(isExpanded ? panel : null);
+      setExpanded(expandedItem ? panel : null);
     }
   };
 
