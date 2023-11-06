@@ -1,23 +1,23 @@
-const FaqText = [
+const items = [
   {
-    title: "Перше питання",
+    title: "Модуль перший",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.",
   },
   {
-    title: "Друге питання",
+    title: "Модуль другий",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.",
   },
   {
-    title: "Третє питання",
+    title: "Модуль третій",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.",
   },
   {
-    title: "Четрвете питання",
+    title: "Модуль четвертий",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.",
   },
   {
-    title: "П'яте питання",
+    title: "Модуль п'ятій",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.",
   },
 ];
-export default FaqText;
+export default items;
