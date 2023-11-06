@@ -8,10 +8,10 @@ const WhySection = () => {
   const whyTitle = {
     fontFamily: "Montserrat",
     color: "#FFFFFF",
-    fontSize: "70px",
+    fontSize: "4rem",
     textAlign: "center",
-    marginTop: "2rem",
-    display: "flex",
+    marginBottom: "2rem",
+    // display: "flex",
     textTransform: "uppercase",
   };
   return (
@@ -19,7 +19,7 @@ const WhySection = () => {
       container
       spacing={3}
       className="why-page"
-      sx={{ display: "flex", alignContent: "center" }}
+      sx={{ display: "flex", alignContent: "center", padding: "2rem" }}
     >
       <Grid
         item
@@ -32,7 +32,7 @@ const WhySection = () => {
           flexWrap: "wrap",
         }}
       >
-        <MainTitle text={"ЧОМУ ТОбІ ПОТРІБЕН ЦЕЙ КУРС?"} sx={whtTitle} />
+        <MainTitle text={"ЧОМУ ТОбІ ПОТРІБЕН ЦЕЙ КУРС?"} sx={whyTitle} />
       </Grid>
       <Grid
         container
