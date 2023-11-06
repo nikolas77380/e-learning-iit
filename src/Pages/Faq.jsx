@@ -22,7 +22,7 @@ function CourseProgramm() {
         </Typography>
       </Grid>
       <Grid item xs={11} md={10} sx={{ marginTop: "3rem" }}>
-        <CustomAccordion items={items} multiple={true} />
+        <CustomAccordion items={FaqText} multiple={false} />
       </Grid>
       <Grid
         item
@@ -34,8 +34,8 @@ function CourseProgramm() {
           text={"Почати навчання прямо зараз"}
           sx={{
             marginTop: "2rem",
-            width: "35.0625rem",
-            height: "5rem",
+            width: "34.9375rem",
+            height: "5.125rem",
             fontSize: { md: "1.7rem", xs: "1rem" },
           }}
         />
