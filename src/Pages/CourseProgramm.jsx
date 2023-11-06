@@ -7,8 +7,11 @@ import MainTitle from "../components/MainTitle";
 
 function CourseProgramm() {
   return (
-    <Grid container sx={{ display: "flex", justifyContent: "center" }}>
-      <Grid item xs={12} sx={{ margin: "2rem" }}>
+    <Grid
+      container
+      sx={{ display: "flex", justifyContent: "center", margin: "2rem" }}
+    >
+      <Grid item xs={12}>
         <MainTitle
           sx={{
             fontFamily: "Montserrat",
@@ -16,6 +19,7 @@ function CourseProgramm() {
             textAlign: "center",
             textTransform: "uppercase",
             fontSize: "4rem",
+            fontWeight: "bold",
           }}
           text={"Програма курсу"}
         />
