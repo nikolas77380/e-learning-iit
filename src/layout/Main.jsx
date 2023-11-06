@@ -7,7 +7,6 @@ import TechnologiesSection from "../components/TechnologiesSection";
 
 function Main() {
   return <Grid container>
-  <TechnologiesSection/>
   </Grid>;
 }
 
