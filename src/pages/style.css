@@ -36,36 +36,9 @@
 .hero-block1 {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD:src/Pages/style.css
-=======
   align-items: flex-end;
   text-align: center;
   height: 15rem;
-}
-
-.el1-title {
-  color: #613d2a;
-  font-family: "Aclonica", sans-serif;
-  font-size: 70px;
-  margin: 20px;
->>>>>>> origin/master:src/pages/style.css
-  align-items: center;
-  text-align: center;
-  height: 10rem;
-  align-items: flex-end;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 27rem;
-  align-content: center;
-  position: relative;
-}
-
-.hero-title {
-  font-family: Aclonica;
-  color: #613d2a;
-  font-size: 3.5rem;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .hero-salary-text {
@@ -110,5 +83,8 @@
 @media (max-width: 600px) {
   .hero-background {
     opacity: 1;
+  }
+  .hero-h2 {
+    margin-top: 0.1rem;
   }
 }
