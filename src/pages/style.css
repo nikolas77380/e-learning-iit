@@ -36,6 +36,19 @@
 .hero-block1 {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD:src/Pages/style.css
+=======
+  align-items: flex-end;
+  text-align: center;
+  height: 15rem;
+}
+
+.el1-title {
+  color: #613d2a;
+  font-family: "Aclonica", sans-serif;
+  font-size: 70px;
+  margin: 20px;
+>>>>>>> origin/master:src/pages/style.css
   align-items: center;
   text-align: center;
   height: 10rem;
