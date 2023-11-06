@@ -1,7 +1,8 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import WhySection from "../Pages/WhySection";
-import HeroSection from "../Pages/HeroSection";
+import WhySection from "../pages/WhySection";
+import HeroSection from "../pages/HeroSection";
+import CourseProgramm from "../pages/CourseProgramm";
 
 function Main() {
   return (
@@ -11,6 +12,9 @@ function Main() {
       </Grid>
       <Grid item xs={12} md={12}>
         <WhySection />
+      </Grid>
+      <Grid item xs={12} md={12}>
+        <CourseProgramm />
       </Grid>
     </Grid>
   );

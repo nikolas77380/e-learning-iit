@@ -46,7 +46,7 @@
 .el1-block {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
   text-align: center;
   height: 15rem;
 }
