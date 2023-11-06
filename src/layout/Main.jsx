@@ -1,6 +1,5 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import { Button } from "@mui/material";
 import WhySection from "../Pages/WhySection";
 import HeroSection from "../Pages/HeroSection";
 
