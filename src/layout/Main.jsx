@@ -1,5 +1,8 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
+import TechnologiesSection from "../components/TechnologiesSection";
+import FeedbackSection from "../components/FeedbackSection";      
+import CourseProgramm from "../Pages/CourseProgramm";
 import WhySection from "../pages/WhySection";
 import HeroSection from "../pages/HeroSection";
 import CourseProgramm from "../pages/CourseProgramm";
@@ -17,6 +20,11 @@ function Main() {
       <Grid item xs={12} md={12}>
         <CourseProgramm />
       </Grid>
+      <Grid item xs={12} m={12}>
+        <TechnologiesSection />
+      </Grid>
+      <Grid item xs={12} m={12}>
+        <FeedbackSection />
       <Grid item xs={12} md={12}>
         <FaqSection />
       </Grid>
