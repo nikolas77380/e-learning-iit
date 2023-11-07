@@ -1,5 +1,5 @@
 import React from 'react';
-import './style2.css';
+import './style.css';
 import { Grid, Typography } from '@mui/material';
 
 import bootstrap from '../images/icons/bootstrap_icon.png'
