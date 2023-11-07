@@ -17,16 +17,18 @@ const titleStyle = {
   letterSpacing: '.0625rem',
   textAlign: 'center',
   textTransform:'uppercase',
-  margin:'3.75rem 1.25rem'
+  margin:'3.75rem 1.25rem 1rem'
 }
 function FeedbackSection() {
   return (
      <Grid container direction='row' spacing={2} justifyContent="center"
-  alignItems="center" sx={{backgroundColor:'black'}}>
-     <MainTitle 
-     text={'Відгуки студентів'}
-     sx={titleStyle}
-     />
+  alignItems="center" sx={{backgroundColor:'black', height:'100vh'}}>
+    <Grid item xs={12}>
+        <MainTitle 
+        text={'Відгуки студентів'}
+        sx={titleStyle}
+        />
+    </Grid>
       {videoList.map((id, index) => (
         <Grid item key={index} xs={8} md={6} sx={{ textAlign:'center'}} > 
           <div style={{display:'flex', justifyContent:'center'}}>
