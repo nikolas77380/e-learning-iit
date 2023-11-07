@@ -5,6 +5,8 @@ import FeedbackSection from "../components/FeedbackSection";
 import CourseProgramm from "../Pages/CourseProgramm";
 import WhySection from "../pages/WhySection";
 import HeroSection from "../pages/HeroSection";
+import CourseProgramm from "../pages/CourseProgramm";
+import FaqSection from "../pages/Faq";
 
 function Main() {
   return (
@@ -15,7 +17,7 @@ function Main() {
       <Grid item xs={12} md={12}>
         <WhySection />
       </Grid>
-      <Grid item xs={12} m={12}>
+      <Grid item xs={12} md={12}>
         <CourseProgramm />
       </Grid>
       <Grid item xs={12} m={12}>
@@ -23,6 +25,8 @@ function Main() {
       </Grid>
       <Grid item xs={12} m={12}>
         <FeedbackSection />
+      <Grid item xs={12} md={12}>
+        <FaqSection />
       </Grid>
     </Grid>
   );
