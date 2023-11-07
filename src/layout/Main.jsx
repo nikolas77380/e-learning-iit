@@ -20,10 +20,10 @@ function Main() {
       <Grid item xs={12} md={12}>
         <CourseProgramm />
       </Grid>
-      <Grid item xs={12} m={12}>
+      <Grid item xs={12} md={12}>
         <TechnologiesSection />
       </Grid>
-      <Grid item xs={12} m={12}>
+      <Grid item xs={12} md={12}>
         <FeedbackSection />
       </Grid>
       <Grid item xs={12} md={12}>

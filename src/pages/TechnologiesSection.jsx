@@ -26,7 +26,7 @@ const iconLinks = [
 const mainImageStyle = {
       backgroundImage: `url(${image})`,
       backgroundSize: 'cover',
-      width:'100%',
+      
       height:'100vh',
       backgroundPosition:'center',
       display: 'flex',
@@ -35,7 +35,7 @@ const mainImageStyle = {
 }
 
 const titleStyle = {
-   fontSize: { md: '4.5rem', xs: '3.5rem' }, 
+   fontSize: { xl: '4.5rem', md:'3.5rem', xs: '3rem' }, 
    margin:'1.25rem',
    fontFamily: 'Montserrat',
    fontWeight: '700',
