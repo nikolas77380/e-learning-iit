@@ -1,55 +1,74 @@
 import React from "react";
-import { Typography, Grid } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import MainButton from "../components/MainButton";
 import "./style.css";
 
 const HeroSection = () => {
+  const h2style = {
+    fontFamily: "Aclonica",
+    color: "#613D2A",
+    fontSize: "3.5rem",
+    textAlign: "center",
+    textTransform: "uppercase",
+    position: "absolute",
+  };
+  const buttonStyle = {
+    width: "23.5rem",
+    height: "9.5rem",
+    fontSize: "2.5rem",
+    lineHeight: "2.3rem",
+    padding: "0.125rem",
+  };
   return (
-    <Grid
-      container
-      className="el1-container"
-      //   sx={{ justifyContent: "space-betwin" }}
-    >
+    <Grid container className="hero-container">
+      <div className="hero-background"></div>
       <Grid
         item
-        xs={11}
-        md={11}
-        className="el1-block"
-        sx={{ marginTop: "-10rem" }}
+        xs={12}
+        md={6}
+        className="hero-block1"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: "1rem",
+        }}
       >
-        <Typography variant="h2" className="el1-title">
-          <b>FRONT-END</b> <br />
-          РОЗРОБНИК З <b>0</b>
-        </Typography>
+        <h2 style={h2style} className="hero-h2">
+          Front-end розробник з 0
+        </h2>
       </Grid>
       <Grid
         item
         xs={12}
         md={12}
-        className="el1-block"
+        className="hero-block"
         sx={{
           justifyContent: "space-around",
           flexWrap: "wrap",
-          marginTop: "25rem",
+          marginTop: "17rem",
+          alignContent: "center",
         }}
       >
-        <div style={{ display: "flex", alignItems: "flex-end" }}>
-          <Typography
-            variant="h1"
-            className="el1-salary-text"
-            sx={{ color: "red" }}
-          >
-            <b>199$</b>
-          </Typography>
-          <Typography
-            variant="h2"
-            className="el1-salary-text-small"
-            sx={{ color: "black" }}
-          >
-            <span className="salary-text">800$</span>
-          </Typography>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-end",
+            position: "relative",
+          }}
+        >
+          <div className="hero-salary-container">
+            <span className="hero-salary-text">
+              <b>199$</b>
+            </span>
+          </div>
+
+          <span className="salary-text">800$</span>
+
+          <hr className="hero-hr" />
+          <hr className="hero-hr1" />
         </div>
-        <MainButton text="Почати навчання прямо зараз" className="el1-button" />
+        <MainButton text="почати навчання прямо зараз" sx={buttonStyle} />
       </Grid>
     </Grid>
   );
