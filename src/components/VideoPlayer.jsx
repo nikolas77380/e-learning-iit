@@ -4,9 +4,12 @@ import {Grid} from "@mui/material";
 import Avatar from '@mui/material/Avatar';
 import {Typography} from "@mui/material";
 import { useState } from "react";
+import ModalVideo from './ModalVideo.jsx';
+import Modal from '@mui/material/Modal';
 
 
 export default function VideoPlayer({videoid, img, name, position}) {
+  
     const titleStyle = {
         fontFamily: 'Montserrat',
         fontSize: '.9375rem',
@@ -29,12 +32,13 @@ export default function VideoPlayer({videoid, img, name, position}) {
     }
 
     const [isHovered, setIsHovered] = useState(0);
-    const handleMouseOver = () => {
-        setIsHovered(1);
-    };
-    const handleMouseLeave = () => {
-        setIsHovered(0);
-    }
+    const handleMouseOver = () => setIsHovered(1);
+    const handleMouseLeave = () => setIsHovered(0);
+
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+    
 
     const videoStyle = {
         width:'320px',
@@ -42,11 +46,9 @@ export default function VideoPlayer({videoid, img, name, position}) {
         transform: isHovered ? 'scale(1.05)' : 'scale(1)',
         transition: 'transform 0.2s'
     }
-    console.log(isHovered);
-
-
+    
     return (
-        <div style={videoStyle} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+        <div style={videoStyle} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} onClick={handleOpen}>
             <iframe className="video"   title="youtube video"
                     src={`https://www.youtube.com/embed/${videoid}?autoplay=${isHovered}&mute=1`}
                     frameborder="0" allowFullScreen  width='320px' height='180px' />
@@ -59,6 +61,14 @@ export default function VideoPlayer({videoid, img, name, position}) {
                     {position}
                 </p>
             </Grid>
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            > 
+                <ModalVideo videoid={videoid} handler={handleClose} />
+            </Modal>
          </div>
                     
                     
