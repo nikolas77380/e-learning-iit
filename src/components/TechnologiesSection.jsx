@@ -50,13 +50,13 @@ const titleStyle = {
 
 function TechnologiesSection() {
   return (
-    <Grid style={mainImageStyle}>
+    <Grid container xs={12} style={mainImageStyle}>
         <div style={{
             backgroundColor:' rgba(0, 0, 0, 0.3)',
             height:'100vh',
             width:'100%'
             }}>
-                <Grid container direction="column"
+                <Grid container xs={12} direction="column"
                     justifyContent="flex-start"
                     alignItems="center">
                       <Grid md={6} margin='3.75rem'>

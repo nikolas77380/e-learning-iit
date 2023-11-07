@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import TechnologiesSection from "../components/TechnologiesSection";
 import FeedbackSection from "../components/FeedbackSection";      
-import CourseProgramm from "../Pages/CourseProgramm";
+import CourseProgramm from "../pages/CourseProgramm";
 import WhySection from "../pages/WhySection";
 import HeroSection from "../pages/HeroSection";
 
