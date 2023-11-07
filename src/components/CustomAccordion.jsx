@@ -5,7 +5,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-function CustomAccordion({ items, multiple }) {
+function CustomAccordion({ items, multiple, backgroundColor }) {
   const [expanded, setExpanded] = useState(multiple ? [] : null);
 
   const handleChange = (panel) => (event, expandedItem) => {
@@ -36,7 +36,7 @@ function CustomAccordion({ items, multiple }) {
             expandIcon={<ExpandMoreIcon />}
             aria-controls={`panel${index}-content`}
             id={`panel${index}-header`}
-            sx={{ backgroundColor: "#F3F3F3" }}
+            sx={{ backgroundColor: backgroundColor || "#F3F3F3" }}
           >
             <Typography sx={{ fontSize: "1.125rem" }}>{item.title}</Typography>
           </AccordionSummary>
