@@ -46,20 +46,24 @@ export default function VideoPlayer({videoid, img, name, position}) {
         position:'relative'
       };
 
-    const [isHovered, setIsHovered] = useState(0);
-    const handleMouseOver = () => setIsHovered(1);
-    const handleMouseLeave = () => setIsHovered(0);
+    const [autoplayNumber, setAutoplayNumber] = useState(0);
+    const handleMouseOver = () => setAutoplayNumber(1);
+    const handleMouseLeave = () => setAutoplayNumber(0);
 
     const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const handleOpen = () => {
+        console.log('handleOpen called');
+        setOpen(true)};
+    const handleClose = () => { 
+        console.log('handle called');
+        setOpen(false)};
     console.log(open);
 
 
     const videoStyle = {
         width:'320px',
         position:'relative',
-        transform: isHovered ? 'scale(1.05)' : 'scale(1)',
+        transform: autoplayNumber ? 'scale(1.05)' : 'scale(1)',
         transition: 'transform 0.2s'
     }
 
@@ -78,11 +82,12 @@ export default function VideoPlayer({videoid, img, name, position}) {
           style={videoStyle} 
           onMouseOver={handleMouseOver} 
           onMouseLeave={handleMouseLeave} 
-          onClick={handleOpen}>
+          //onClick={handleOpen}
+          >
             <iframe className="video"   title="youtube video" onClick={handleOpen}
-                    src={`https://www.youtube.com/embed/${videoid}?autoplay=${isHovered}&mute=1&enablejsapi=0`}
+                    src={`https://www.youtube.com/embed/${videoid}?autoplay=${autoplayNumber}&mute=1&enablejsapi=0`}
                     frameBorder="0" allowFullScreen  width='320px' height='180px' />
-            <div style={overlayStyle}></div>
+            <div style={overlayStyle} onClick={handleOpen}></div>
             <Avatar alt="Remy Sharp" src={img} sx={{ width: '4.7rem', height: '4.7rem', position:'absolute', top:'170px'}}/>      
             <Grid container direction="column" spacing={2} margin='0 40px 40px 0'>
                 <Typography sx={titleStyle}> 
