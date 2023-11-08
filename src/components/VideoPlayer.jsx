@@ -62,12 +62,27 @@ export default function VideoPlayer({videoid, img, name, position}) {
         transform: isHovered ? 'scale(1.05)' : 'scale(1)',
         transition: 'transform 0.2s'
     }
+
+    const overlayStyle = {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        background: "transparent",
+      };
+    
     
     return (
-        <div style={videoStyle} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} onClick={handleOpen}>
-            <iframe className="video"   title="youtube video"
-                    src={`https://www.youtube.com/embed/${videoid}?autoplay=${isHovered}&mute=1`}
+        <div 
+          style={videoStyle} 
+          onMouseOver={handleMouseOver} 
+          onMouseLeave={handleMouseLeave} 
+          onClick={handleOpen}>
+            <iframe className="video"   title="youtube video" onClick={handleOpen}
+                    src={`https://www.youtube.com/embed/${videoid}?autoplay=${isHovered}&mute=1&enablejsapi=0`}
                     frameBorder="0" allowFullScreen  width='320px' height='180px' />
+            <div style={overlayStyle}></div>
             <Avatar alt="Remy Sharp" src={img} sx={{ width: '4.7rem', height: '4.7rem', position:'absolute', top:'170px'}}/>      
             <Grid container direction="column" spacing={2} margin='0 40px 40px 0'>
                 <Typography sx={titleStyle}> 
