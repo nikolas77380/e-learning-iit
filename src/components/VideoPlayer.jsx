@@ -1,39 +1,42 @@
-
 import React from "react";
 import {Grid} from "@mui/material";
 import Avatar from '@mui/material/Avatar';
 import {Typography} from "@mui/material";
+import { useState } from "react";
+import ModalVide from "./ModalVideo";
+import {titleStyle, positionStyle, overlayStyle} from './styles'
 
 
 export default function VideoPlayer({videoid, img, name, position}) {
-    const titleStyle = {
-        fontFamily: 'Montserrat',
-        fontSize: '.9375rem',
-        fontWeight: '700',
-        letterSpacing: '0.0188rem',
-        textAlign: 'left',
-        textTransform:'uppercase',
-        color:'white',
-        paddingTop:'60px'
-    }
 
-    const positionStyle = {
-        fontFamily: 'Roboto',
-        fontSize: '0.8125rem',
-        fontWeight: '800',
-        letterSpacing: 0,
-        textAlign: 'left',
-        marginTop:'5px',
-        color:'rgba(176, 176, 176, 1)'
-    }
+    const [autoplayNumber, setAutoplayNumber] = useState(0);
+    const handleMouseOver = () => setAutoplayNumber(1);
+    const handleMouseLeave = () => setAutoplayNumber(0);
 
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => { setOpen(true)};
+    const handleClose = () => {setOpen(false)};
+
+    const videoStyle = {
+        width:'320px',
+        position:'relative',
+        transform: autoplayNumber ? 'scale(1.05)' : 'scale(1)',
+        transition: 'transform 0.2s'
+    }
+    
+    
     return (
-        <div style={{width:'320px', position:'relative'}}>
-            <iframe className="video"   title="youtube video"
-                    src={`https://www.youtube.com/embed/${videoid}?autoplay=1&mute=1`}
-                    frameborder="0" allowFullScreen  width='320px' height='180px' />
+        <div 
+          style={videoStyle} 
+          onMouseOver={handleMouseOver} 
+          onMouseLeave={handleMouseLeave} 
+          >
+            <iframe className="video"   title="youtube video" onClick={handleOpen}
+                    src={`https://www.youtube.com/embed/${videoid}?autoplay=${autoplayNumber}&mute=1&enablejsapi=0`}
+                    frameBorder="0" allowFullScreen  width='320px' height='180px' />
+            <div style={overlayStyle} onClick={handleOpen}></div>
             <Avatar alt="Remy Sharp" src={img} sx={{ width: '4.7rem', height: '4.7rem', position:'absolute', top:'170px'}}/>      
-            <Grid direction="column" spacing={2} margin='0 40px 40px 0'>
+            <Grid container direction="column" spacing={2} margin='0 40px 40px 0'>
                 <Typography sx={titleStyle}> 
                     {name}
                 </Typography>
@@ -41,9 +44,7 @@ export default function VideoPlayer({videoid, img, name, position}) {
                     {position}
                 </p>
             </Grid>
-         </div>
-                    
-                    
-               
+            <ModalVide videoid={videoid} open={open} handleClose={handleClose}/>
+         </div>         
     )
 }
