@@ -67,7 +67,7 @@ function TechnologiesSection() {
                     <Grid  container spacing={3} direction="row" justifyContent="center" alignItems="center">
                         <Grid container  spacing={4} item xs={8} md={10} direction="row" justifyContent="center" alignItems="center" >
                             {iconLinks.map((link, index) => (
-                                <Grid className='icon' key={index} item xs={4} md={3} direction="row" justifyContent="center" alignItems="center">
+                                <Grid container className='icon' key={index} item xs={4} md={3} direction="row" justifyContent="center" alignItems="center">
                                      <a  href={link.url} target="_blank">
                                          <img src={link.icon} alt={`Icon ${link.icon}`} style={{width:link.width,  display:'block', margin:'0 auto'}} />
                                     </a>
