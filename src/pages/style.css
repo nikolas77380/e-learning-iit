@@ -45,10 +45,6 @@
   position: relative;
 }
 
-<<<<<<< HEAD:src/Pages/style.css
-.hero-title {
-  font-family: Aclonica;
-=======
 .el1-block {
   display: flex;
   flex-direction: column;
@@ -58,7 +54,6 @@
 }
 
 .el1-title {
->>>>>>> origin/master:src/pages/style.css
   color: #613d2a;
   font-size: 3.5rem;
   text-align: center;
