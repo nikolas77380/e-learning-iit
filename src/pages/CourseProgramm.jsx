@@ -3,25 +3,28 @@ import CustomAccordion from "../components/CustomAccordion";
 import items from "../constants/ProgramText";
 import { Grid, Typography } from "@mui/material";
 import MainButton from "../components/MainButton";
+import MainTitle from "../components/MainTitle";
 
 function CourseProgramm() {
   return (
-    <Grid container sx={{ display: "flex", justifyContent: "center" }}>
+    <Grid
+      container
+      sx={{ display: "flex", justifyContent: "center", margin: " 1rem 0" }}
+    >
       <Grid item xs={12}>
-        <Typography
-          variant="h1"
+        <MainTitle
           sx={{
             fontFamily: "Montserrat",
             color: "#613D2A",
             textAlign: "center",
             textTransform: "uppercase",
-            fontSize: "4rem",
+            fontSize: "3.9rem",
+            fontWeight: "bold",
           }}
-        >
-          Програма курсу
-        </Typography>
+          text={"Програма курсу"}
+        />
       </Grid>
-      <Grid item xs={11} md={10} sx={{ marginTop: "3rem" }}>
+      <Grid item xs={11} md={10} sx={{ marginTop: "2rem" }}>
         <CustomAccordion items={items} multiple />
       </Grid>
       <Grid

@@ -1,5 +1,5 @@
 import React from 'react';
-import './style2.css';
+import './style.css';
 import { Grid, Typography } from '@mui/material';
 
 import bootstrap from '../images/icons/bootstrap_icon.png'
@@ -26,7 +26,7 @@ const iconLinks = [
 const mainImageStyle = {
       backgroundImage: `url(${image})`,
       backgroundSize: 'cover',
-      width:'100%',
+      
       height:'100vh',
       backgroundPosition:'center',
       display: 'flex',
@@ -35,7 +35,7 @@ const mainImageStyle = {
 }
 
 const titleStyle = {
-   fontSize: { md: '4.5rem', xs: '3.5rem' }, 
+   fontSize: { xl: '4.5rem', md:'3.5rem', xs: '3rem' }, 
    margin:'1.25rem',
    fontFamily: 'Montserrat',
    fontWeight: '700',
@@ -50,13 +50,13 @@ const titleStyle = {
 
 function TechnologiesSection() {
   return (
-    <Grid style={mainImageStyle}>
+    <Grid container xs={12} style={mainImageStyle}>
         <div style={{
             backgroundColor:' rgba(0, 0, 0, 0.3)',
             height:'100vh',
             width:'100%'
             }}>
-                <Grid container direction="column"
+                <Grid container xs={12} direction="column"
                     justifyContent="flex-start"
                     alignItems="center">
                       <Grid md={6} margin='3.75rem'>
@@ -67,7 +67,7 @@ function TechnologiesSection() {
                     <Grid  container spacing={3} direction="row" justifyContent="center" alignItems="center">
                         <Grid container  spacing={4} item xs={8} md={10} direction="row" justifyContent="center" alignItems="center" >
                             {iconLinks.map((link, index) => (
-                                <Grid className='icon' key={index} item xs={4} md={3} direction="row" justifyContent="center" alignItems="center">
+                                <Grid container className='icon' key={index} item xs={4} md={3} direction="row" justifyContent="center" alignItems="center">
                                      <a  href={link.url} target="_blank">
                                          <img src={link.icon} alt={`Icon ${link.icon}`} style={{width:link.width,  display:'block', margin:'0 auto'}} />
                                     </a>

@@ -10,6 +10,7 @@ const HeroSection = () => {
     fontSize: "3.5rem",
     textAlign: "center",
     textTransform: "uppercase",
+    position: "absolute",
   };
   const buttonStyle = {
     width: "23.5rem",
@@ -33,7 +34,9 @@ const HeroSection = () => {
           marginTop: "1rem",
         }}
       >
-        <h2 style={h2style}>Front-end розробник з 0</h2>
+        <h2 style={h2style} className="hero-h2">
+          Front-end розробник з 0
+        </h2>
       </Grid>
       <Grid
         item

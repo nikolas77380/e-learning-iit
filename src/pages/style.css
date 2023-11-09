@@ -35,29 +35,10 @@
 .hero-block,
 .hero-block1 {
   display: flex;
-  text-align: center;
-  height: 10rem;
-  align-items: flex-end;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 27rem;
-  align-content: center;
-  position: relative;
-}
-
-.el1-block {
-  display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align: center;
   height: 15rem;
-}
-
-.el1-title {
-  color: #613d2a;
-  font-size: 3.5rem;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .hero-salary-text {
@@ -99,8 +80,30 @@
   opacity: 0.3;
   position: absolute;
 }
+/* FAQ-section.css */
+.faq-background {
+  background-image: url("../images/faqSection.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top 50%;
+  height: 50.5rem;
+  width: 100%;
+  opacity: 0.7;
+  position: absolute;
+}
+
+.icon:hover {
+  transform: scale(1.05);
+}
+
 @media (max-width: 600px) {
   .hero-background {
     opacity: 1;
+  }
+  .hero-h2 {
+    margin-top: 0.1rem;
+  }
+  .hero-container {
+    height: 53rem;
   }
 }
