@@ -8,6 +8,7 @@ import WhySection from "../pages/WhySection";
 import HeroSection from "../pages/HeroSection";
 import FaqSection from "../pages/Faq";
 import SphereSection from "../pages/SphereSection";
+import MentorSection from "../pages/MentorSection";
 
 function Main() {
   return (
@@ -29,6 +30,9 @@ function Main() {
       </Grid>
       <Grid item xs={12} md={12}>
         <FeedbackSection />
+      </Grid>
+      <Grid item xs={12} md={12}>
+        <MentorSection />
       </Grid>
       <Grid item xs={12} md={12}>
         <FaqSection />
