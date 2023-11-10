@@ -2,9 +2,15 @@ import { Grid} from "@mui/material";
 import image from '../images/mentor.jpeg'
 import MainTitle from "../components/MainTitle";
 import {Button} from "@mui/material";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import { faGoogle, faGooglePlusG, faFacebookF, faTwitter, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
+
+
 
 
 export default function MentorSection() {
+    
     const titleStyle = {
         cfontFamily: 'Montserrat',
         fontSize: '50px',
@@ -41,7 +47,12 @@ export default function MentorSection() {
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                         
                         <Grid container item>
-                            <Button>ok</Button>
+                         
+                            <FontAwesomeIcon icon={faGooglePlusG} />
+                            <FontAwesomeIcon icon={faFacebookF} />
+                            <FontAwesomeIcon icon={faTwitter} />
+                            <FontAwesomeIcon icon={faLinkedinIn} style={{color: "#080808",}} />
+                            {/* <FontAwesomeIcon icon={faYoutube} /> */}
                         </Grid>
                     </Grid>
                     
