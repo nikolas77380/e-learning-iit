@@ -4,6 +4,7 @@ import MainTitle from "../components/MainTitle";
 import IconBlock from "../components/IconBlock";
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
+
 export default function MentorSection() {
 
     const titleStyle = {
@@ -16,6 +17,16 @@ export default function MentorSection() {
         color:' #412B14',
         textTransform:'uppercase',
         margin:'3.75rem 0 1.25rem',
+      }
+      const titleStyle2 = {
+        cfontFamily: 'Montserrat',
+        fontSize: '3.125rem',
+        fontWeight: 700,
+        lineHeight: '3.8125rem',
+        letterSpacing: '0.0625rem',
+        textAlign: 'center',
+        color:' white',
+        textTransform:'uppercase',
       }
       const nameStyle = {
         fontFamily: 'Montserrat',
@@ -61,7 +72,7 @@ export default function MentorSection() {
                 alignItems="center"
                 alignContent='flex-start'
                 sx={{boxShadow:' 0.3125rem 0.3125rem 0.25rem 0px #00000040', height:{xs:'100vh', sm:'auto'} }}>
-                <Grid item xs={12} sm={6} md={6} >
+                <Grid item xs={12} sm={6} md={6} position='relative' alignContent='flex-start'>
                     <Card sx={{ height: '100%' }}>
                             <CardMedia
                                 sx={{ height: {xs:'540px', sm:'640px', md:'700px'}}}
@@ -69,17 +80,23 @@ export default function MentorSection() {
                                 title="Микола Кіпняк"
                             />
                      </Card>
+                     <Grid item sx={{display:{sm: 'none', xs: 'block'}, position:'absolute', top:'20px', left:'50%', transform:'translate(-50%)'}}>
+                            <MainTitle 
+                                text={'Ментор'}
+                                sx={titleStyle2}
+                                />
+                        </Grid>
                     {/* <img src={image} alt="Микола Кіпняк"  style={{width:'100%', maxHeight:'40rem', objectFit: 'cover'}}/> */}
                 </Grid>
                 <Grid container item xs={12} sm={6} md={6} 
                     direction="column"
                     justifyContent="center"
                     alignItems="center"
-                    sx={{}}>
+                   >
                     <Grid container item  direction="column"
                         justifyContent="center"
                         alignItems="center">
-                    <Grid item sx={{display:{ sm: 'block', xs: 'none' }}}>
+                        <Grid item sx={{display:{ sm: 'block', xs: 'none' }}}>
                             <MainTitle 
                                 text={'Ментор'}
                                 sx={titleStyle}
