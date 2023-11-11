@@ -2,12 +2,13 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 
 import TechnologiesSection from "../pages/TechnologiesSection";
-import FeedbackSection from "../pages/FeedbackSection";      
+import FeedbackSection from "../pages/FeedbackSection";
 import CourseProgramm from "../pages/CourseProgramm";
 import WhySection from "../pages/WhySection";
 import HeroSection from "../pages/HeroSection";
 import FaqSection from "../pages/Faq";
 import SphereSection from "../pages/SphereSection";
+import SalarySection from "../pages/SalariesSection";
 import MentorSection from "../pages/MentorSection";
 
 function Main() {
@@ -33,6 +34,9 @@ function Main() {
       </Grid>
       <Grid item xs={12} md={12}>
         <MentorSection />
+      </Grid>
+      <Grid item xs={12} md={12}>
+        <SalarySection />
       </Grid>
       <Grid item xs={12} md={12}>
         <FaqSection />

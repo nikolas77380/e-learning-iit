@@ -1,61 +1,98 @@
 import { Grid} from "@mui/material";
 import image from '../images/mentor.jpeg'
 import MainTitle from "../components/MainTitle";
-import {Button} from "@mui/material";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import { faGoogle, faGooglePlusG, faFacebookF, faTwitter, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
-
-
-
-
+import IconBlock from "../components/IconBlock";
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
 export default function MentorSection() {
-    
+
     const titleStyle = {
         cfontFamily: 'Montserrat',
-        fontSize: '50px',
+        fontSize: '3.125rem',
         fontWeight: 700,
-        lineHeight: '61px',
-        letterSpacing: '1px',
+        lineHeight: '3.8125rem',
+        letterSpacing: '0.0625rem',
         textAlign: 'center',
         color:' #412B14',
-        textTransform:'uppercase'
+        textTransform:'uppercase',
+        margin:'3.75rem 0 1.25rem'
+      }
+      const nameStyle = {
+        fontFamily: 'Montserrat',
+        fontSize: '1.25rem',
+        fontWeight: 700,
+        lineHeight: '1.6875rem',
+        letterSpacing: '0.0625rem',
+        textAlign: 'left',
+        color:'#212121'
+      }
+
+      const positionStyle = {
+        fontFamily: 'Roboto',
+        fontSize: '1.0625rem',
+        fontWeight: 500,
+        lineHeight: '1.5625rem',
+        letterSpacing: 0,
+        textAlign: 'left',
+        color:'#777777',
+        margin:0
+      }
+
+      const paragrfStyle = {
+        fontFamily: 'Roboto',
+        fontSize: '0.9375rem',
+        fontWeight: 400,
+        lineHeight: '1.5625rem',
+        letterSpacing: 0,
+        textAlign: 'center',
+        color:'#444444',
+        padding:'0.625rem 2.5rem',
       }
 
     return(
         <Grid container direction="row"
-        justifyContent="center"
-        alignItems="center">
-            <Grid container spacing={0} item xs={10} direction="row"
-  justifyContent="center"
-  alignItems="center" sx={{boxShadow:' 5px 5px 4px 0px #00000040', margin:'60px 0'}}>
-                <Grid item xs={10} md={6} >
-                    <img src={image} alt=""  style={{width:'100%'}}/>
+            justifyContent="center"
+            alignItems="center" sx={{height:'100vh'}}>
+            <Grid container 
+                spacing={0} 
+                item xs={12} sm={10}
+                direction='row'
+                justifyContent="flex-start"
+                alignItems="flex-start"
+                sx={{boxShadow:' 0.3125rem 0.3125rem 0.25rem 0px #00000040', margin:'3.75rem 0', maxHeight:'40rem',}}>
+                    
+                <Grid item xs={12} md={5} sx={{height:{xs:'600px'}}}>
+                <Card sx={{ height: '100%' }}>
+                        <CardMedia
+                            sx={{ height: 640 }}
+                            image={image}
+                            title="green iguana"
+                        />
+                        </Card>
+                    {/* <img src={image} alt="Микола Кіпняк"  style={{width:'100%', maxHeight:'40rem', objectFit: 'cover'}}/> */}
                 </Grid>
-                <Grid container item xs={10} md={6} irection="column"
-  justifyContent="center"
-  alignItems="center">
-                    <Grid container item xs={10} direction="column"
-  justifyContent="center"
-  alignItems="center">
+                <Grid container item xs={12} md={7} 
+                    direction="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    px='3.75rem'>
+                    <Grid container item  direction="column"
+                        justifyContent="center"
+                        alignItems="center">
                         <MainTitle 
                             text={'Ментор'}
                             sx={titleStyle}
                             />
-                        <h3>Микола Кіпняк</h3>
-                        <p>Senior Full-stack engineer</p>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                        
-                        <Grid container item>
-                         
-                            <FontAwesomeIcon icon={faGooglePlusG} />
-                            <FontAwesomeIcon icon={faFacebookF} />
-                            <FontAwesomeIcon icon={faTwitter} />
-                            <FontAwesomeIcon icon={faLinkedinIn} style={{color: "#080808",}} />
-                            {/* <FontAwesomeIcon icon={faYoutube} /> */}
-                        </Grid>
+                        <h3 style={nameStyle}>Микола Кіпняк</h3>
+                        <p style={positionStyle}>Senior Full-stack engineer</p>
+                        <p style={paragrfStyle}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </Grid>
-                    
+                    <Grid container item xs={10} 
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center">
+                            <IconBlock/>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
