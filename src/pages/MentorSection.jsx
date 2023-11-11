@@ -15,7 +15,7 @@ export default function MentorSection() {
         textAlign: 'center',
         color:' #412B14',
         textTransform:'uppercase',
-        margin:'3.75rem 0 1.25rem'
+        margin:'3.75rem 0 1.25rem',
       }
       const nameStyle = {
         fontFamily: 'Montserrat',
@@ -52,37 +52,39 @@ export default function MentorSection() {
     return(
         <Grid container direction="row"
             justifyContent="center"
-            alignItems="center" sx={{height:'100vh'}}>
+            alignItems="center" sx={{height:'100vh', alignContent:{xs:'flex-start', sm:'center'}}}>
             <Grid container 
                 spacing={0} 
-                item xs={12} sm={10}
+                item xs={12} sm={11} md={10}
                 direction='row'
-                justifyContent="flex-start"
-                alignItems="flex-start"
-                sx={{boxShadow:' 0.3125rem 0.3125rem 0.25rem 0px #00000040', margin:'3.75rem 0', maxHeight:'40rem',}}>
-                    
-                <Grid item xs={12} md={5} sx={{height:{xs:'600px'}}}>
-                <Card sx={{ height: '100%' }}>
-                        <CardMedia
-                            sx={{ height: 640 }}
-                            image={image}
-                            title="green iguana"
-                        />
-                        </Card>
+                justifyContent="center"
+                alignItems="center"
+                alignContent='flex-start'
+                sx={{boxShadow:' 0.3125rem 0.3125rem 0.25rem 0px #00000040', height:{xs:'100vh', sm:'auto'} }}>
+                <Grid item xs={12} sm={6} md={6} >
+                    <Card sx={{ height: '100%' }}>
+                            <CardMedia
+                                sx={{ height: {xs:'540px', sm:'640px', md:'700px'}}}
+                                image={image}
+                                title="Микола Кіпняк"
+                            />
+                     </Card>
                     {/* <img src={image} alt="Микола Кіпняк"  style={{width:'100%', maxHeight:'40rem', objectFit: 'cover'}}/> */}
                 </Grid>
-                <Grid container item xs={12} md={7} 
+                <Grid container item xs={12} sm={6} md={6} 
                     direction="column"
                     justifyContent="center"
                     alignItems="center"
-                    px='3.75rem'>
+                    sx={{}}>
                     <Grid container item  direction="column"
                         justifyContent="center"
                         alignItems="center">
-                        <MainTitle 
-                            text={'Ментор'}
-                            sx={titleStyle}
-                            />
+                    <Grid item sx={{display:{ sm: 'block', xs: 'none' }}}>
+                            <MainTitle 
+                                text={'Ментор'}
+                                sx={titleStyle}
+                                />
+                        </Grid>
                         <h3 style={nameStyle}>Микола Кіпняк</h3>
                         <p style={positionStyle}>Senior Full-stack engineer</p>
                         <p style={paragrfStyle}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
