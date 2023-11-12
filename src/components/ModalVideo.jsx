@@ -32,7 +32,7 @@ export default function ModalVide({videoid, open, handleClose}) {
             </Button>
             <iframe className="video"   title="youtube video"
                     src={`https://www.youtube.com/embed/${videoid}?autoplay=1&mute=1`}
-                    frameBorder="0" allowFullScreen  width='100%' height='360px' />
+                    frameBorder="0" allowFullScreen  width='100%' height='400px' />
         </Grid>
     </Modal>
     )

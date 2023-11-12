@@ -17,12 +17,12 @@ const titleStyle = {
   letterSpacing: '.0625rem',
   textAlign: 'center',
   textTransform:'uppercase',
-  margin:'3.75rem 1.25rem 1rem'
+  margin:'3rem 1.25rem 1rem'
 }
 function FeedbackSection() {
   return (
      <Grid container direction='row' spacing={2} justifyContent="center"
-  alignItems="center" sx={{backgroundColor:'black', height:'100vh'}}>
+  alignItems="center" sx={{backgroundColor:'black', minHeight:'600px'}}>
     <Grid item xs={12}>
         <MainTitle 
         text={'Відгуки студентів'}

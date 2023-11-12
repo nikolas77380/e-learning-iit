@@ -19,7 +19,7 @@ export default function MentorSection() {
                 <Grid item xs={12} sm={6} md={6} position='relative' alignContent='flex-start'>
                     <Card sx={{ height: '100%' }}>
                             <CardMedia
-                                sx={{ height: {xs:'540px', sm:'640px', md:'700px'}}}
+                                sx={{ height: {xs:'400px', sm:'640px', md:'650px'}}}
                                 image={image}
                                 title="Микола Кіпняк"
                             />
