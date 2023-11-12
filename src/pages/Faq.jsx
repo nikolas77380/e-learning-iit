@@ -17,7 +17,10 @@ function FaqSection() {
     margin: "2rem 0",
   };
   return (
-    <Grid container sx={{ display: "flex", justifyContent: "center" }}>
+    <Grid
+      container
+      sx={{ display: "flex", justifyContent: "center", height: "50.5rem" }}
+    >
       <div className="faq-background"></div>
       <Grid item xs={12}>
         <MainTitle text={"Є питання?"} sx={faqTitle} />
