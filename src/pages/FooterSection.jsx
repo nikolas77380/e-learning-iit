@@ -30,7 +30,7 @@ const FooterSection = () => {
 
   return (
     <Grid container spacing={3} sx={containerStyle}>
-      <Grid item xs={12} sx={gridStyle}>
+      <Grid item xs={12} md={12} sx={gridStyle}>
         <Link href="mailto:institute-of-it@gmail.com" style={linkStyle}>
           institute-of-it@gmail.com
         </Link>
@@ -41,7 +41,7 @@ const FooterSection = () => {
           Політика конфіденційності
         </Link>
       </Grid>
-      <Grid item xs={12}>
+      <Grid item xs={12} md={12}>
         <MainButton
           text={"Зв'язатися з нами"}
           sx={{
