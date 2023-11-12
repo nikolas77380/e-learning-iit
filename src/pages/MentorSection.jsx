@@ -4,61 +4,9 @@ import MainTitle from "../components/MainTitle";
 import IconBlock from "../components/IconBlock";
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
+import {titleStyle, titleStyle2, nameStyle, positionStyle, paragrfStyle, shadowContainerStyle, gridTitleStyle} from './style'
 
 export default function MentorSection() {
-
-    const titleStyle = {
-        cfontFamily: 'Montserrat',
-        fontSize: '3.125rem',
-        fontWeight: 700,
-        lineHeight: '3.8125rem',
-        letterSpacing: '0.0625rem',
-        textAlign: 'center',
-        color:' #412B14',
-        textTransform:'uppercase',
-        margin:'3.75rem 0 1.25rem',
-      }
-      const titleStyle2 = {
-        cfontFamily: 'Montserrat',
-        fontSize: '3.125rem',
-        fontWeight: 700,
-        lineHeight: '3.8125rem',
-        letterSpacing: '0.0625rem',
-        textAlign: 'center',
-        color:' white',
-        textTransform:'uppercase',
-      }
-      const nameStyle = {
-        fontFamily: 'Montserrat',
-        fontSize: '1.25rem',
-        fontWeight: 700,
-        lineHeight: '1.6875rem',
-        letterSpacing: '0.0625rem',
-        textAlign: 'left',
-        color:'#212121'
-      }
-
-      const positionStyle = {
-        fontFamily: 'Roboto',
-        fontSize: '1.0625rem',
-        fontWeight: 500,
-        lineHeight: '1.5625rem',
-        letterSpacing: 0,
-        textAlign: 'left',
-        color:'#777777',
-        margin:0
-      }
-
-      const paragrfStyle = {
-        fontFamily: 'Roboto',
-        fontSize: '0.9375rem',
-        fontWeight: 400,
-        lineHeight: '1.5625rem',
-        letterSpacing: 0,
-        textAlign: 'center',
-        color:'#444444',
-        padding:'0.625rem 2.5rem',
-      }
 
     return(
         <Grid container direction="row"
@@ -67,11 +15,7 @@ export default function MentorSection() {
             <Grid container 
                 spacing={0} 
                 item xs={12} sm={11} md={10}
-                direction='row'
-                justifyContent="center"
-                alignItems="center"
-                alignContent='flex-start'
-                sx={{boxShadow:' 0.3125rem 0.3125rem 0.25rem 0px #00000040', height:{xs:'100vh', sm:'auto'} }}>
+                sx={shadowContainerStyle}>
                 <Grid item xs={12} sm={6} md={6} position='relative' alignContent='flex-start'>
                     <Card sx={{ height: '100%' }}>
                             <CardMedia
@@ -80,13 +24,12 @@ export default function MentorSection() {
                                 title="Микола Кіпняк"
                             />
                      </Card>
-                     <Grid item sx={{display:{sm: 'none', xs: 'block'}, position:'absolute', top:'20px', left:'50%', transform:'translate(-50%)'}}>
+                     <Grid item sx={gridTitleStyle}>
                             <MainTitle 
                                 text={'Ментор'}
                                 sx={titleStyle2}
                                 />
                         </Grid>
-                    {/* <img src={image} alt="Микола Кіпняк"  style={{width:'100%', maxHeight:'40rem', objectFit: 'cover'}}/> */}
                 </Grid>
                 <Grid container item xs={12} sm={6} md={6} 
                     direction="column"
