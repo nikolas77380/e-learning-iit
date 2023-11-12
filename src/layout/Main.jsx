@@ -10,6 +10,7 @@ import FaqSection from "../pages/Faq";
 import SphereSection from "../pages/SphereSection";
 import SalarySection from "../pages/SalariesSection";
 import PricesSection from "../pages/PricesSection";
+import FooterSection from "../pages/FooterSection";
 
 function Main() {
   return (
@@ -40,6 +41,9 @@ function Main() {
       </Grid>
       <Grid item xs={12} md={12}>
         <FaqSection />
+      </Grid>
+      <Grid item xs={12} md={12}>
+        <FooterSection />
       </Grid>
     </Grid>
   );
