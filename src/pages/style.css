@@ -113,11 +113,49 @@
   line-height: 3.0475rem;
 }
 
+/* PricesSection.css */
+.prices-container {
+  height: 50rem;
+  padding: 2rem;
+}
+
+.swiper {
+  max-width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.slide-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e8511c !important;
+  height: 0.7rem !important;
+  width: 0.7rem !important;
+}
+
 @media (max-width: 600px) {
   .hero-background {
     opacity: 1;
   }
   .hero-h2 {
     margin-top: 0.1rem;
+  }
+  .liSwiper {
+    max-width: 100%;
+  }
+  .slide-container {
+    max-width: 5rem;
   }
 }
