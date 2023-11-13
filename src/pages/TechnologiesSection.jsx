@@ -26,7 +26,6 @@ const iconLinks = [
 const mainImageStyle = {
       backgroundImage: `url(${image})`,
       backgroundSize: 'cover',
-      
       height:'100vh',
       backgroundPosition:'center',
       display: 'flex',
@@ -35,7 +34,7 @@ const mainImageStyle = {
 }
 
 const titleStyle = {
-   fontSize: { xl: '4.5rem', md:'3.5rem', xs: '3rem' }, 
+   fontSize: '3rem', 
    fontFamily: 'Montserrat',
    fontWeight: '700',
    lineHeight: '5.3125rem',
@@ -49,22 +48,22 @@ const titleStyle = {
 
 function TechnologiesSection() {
   return (
-    <Grid container xs={12} style={mainImageStyle}>
-        <div style={{
+    <Grid container xs={12} md={12} style={mainImageStyle}>
+        <Grid item xs={12} sx={{
             backgroundColor:' rgba(0, 0, 0, 0.3)',
-            height:'100vh',
-            width:'100%'
+            height:'100%'
             }}>
-                <Grid container xs={12} direction="column"
-                    justifyContent="flex-start"
-                    alignItems="center">
-                      <Grid md={6} margin='3.75rem'>
+                <Grid container item xs={12} direction="row"
+                    justifyContent="center"
+                    alignItems="center"
+                    >
+                      <Grid container item md={6} margin='20px 0'>
                       <MainTitle 
                         text={'Які технології Ви вивчите'}
                         sx={titleStyle}/>
                       </Grid>
-                    <Grid  container spacing={3} direction="row" justifyContent="center" alignItems="center">
-                        <Grid container  spacing={4} item xs={8} md={10} direction="row" justifyContent="center" alignItems="center" >
+                    <Grid  container spacing={3}  direction="row" justifyContent="center" alignItems="center" alignContent='center' marginTop='20px' >
+                        <Grid container  spacing={3} item xs={8} md={10} direction="row" justifyContent="center" alignItems="center" >
                             {iconLinks.map((link, index) => (
                                 <Grid container className='icon' key={index} item xs={4} md={3} direction="row" justifyContent="center" alignItems="center">
                                      <a  href={link.url} target="_blank">
@@ -75,7 +74,7 @@ function TechnologiesSection() {
                         </Grid>
                     </Grid>
                 </Grid>
-        </div>
+        </Grid>
     </Grid>
   );
 }

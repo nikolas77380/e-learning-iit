@@ -12,6 +12,7 @@ import SalarySection from "../pages/SalariesSection";
 import PricesSection from "../pages/PricesSection";
 import FooterSection from "../pages/FooterSection";
 import FooterSection2 from "../pages/FooterSection2";
+import MentorSection from "../pages/MentorSection";
 
 function Main() {
   return (
@@ -33,6 +34,9 @@ function Main() {
       </Grid>
       <Grid item xs={12} md={12}>
         <FeedbackSection />
+      </Grid>
+      <Grid item xs={12} md={12}>
+        <MentorSection />
       </Grid>
       <Grid item xs={12} md={12}>
         <SalarySection />
