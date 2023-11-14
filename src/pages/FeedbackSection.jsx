@@ -22,7 +22,7 @@ const titleStyle = {
 function FeedbackSection() {
   return (
      <Grid container direction='row' spacing={2} justifyContent="center"
-  alignItems="center" sx={{backgroundColor:'black', minHeight:'600px'}}>
+  alignItems="center" sx={{backgroundColor:'black', minHeight:'100vh'}}>
     <Grid item xs={12}>
         <MainTitle 
         text={'Відгуки студентів'}

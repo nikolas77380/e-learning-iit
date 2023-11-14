@@ -33,9 +33,9 @@ export default function VideoPlayer({videoid, img, name, position}) {
           >
             <iframe className="video"   title="youtube video" onClick={handleOpen}
                     src={`https://www.youtube.com/embed/${videoid}?autoplay=${autoplayNumber}&mute=1&enablejsapi=0`}
-                    frameBorder="0" allowFullScreen  width='320px' height='180px' />
+                     allowFullScreen  width='320px' height='180px' />
             <div style={overlayStyle} onClick={handleOpen}></div>
-            <Avatar alt="Remy Sharp" src={img} sx={{ width: '4.7rem', height: '4.7rem', position:'absolute', top:'170px'}}/>      
+            <Avatar alt={name} src={img} sx={{ width: '4.7rem', height: '4.7rem', position:'absolute', top:'170px'}}/>      
             <Grid container direction="column" spacing={2} margin='0 40px 40px 0'>
                 <Typography sx={titleStyle}> 
                     {name}

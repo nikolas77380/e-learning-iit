@@ -50,7 +50,7 @@ const titleStyle = {
     letterSpacing: 0,
     textAlign: 'center',
     color:'#444444',
-    padding:'0.625rem 2.5rem',
+    padding:'0 2.5rem',
   }
 
   const shadowContainerStyle = {
