@@ -9,6 +9,7 @@ import Slide from '@mui/material/Slide';
 import { useEffect, useState } from 'react';
 import {titleStyle, titleStyle2, nameStyle, positionStyle, paragrfStyle, shadowContainerStyle, gridTitleStyle} from './style'
 import MainButton from '../components/MainButton';
+import FullScreenDialog from '../components/FullScreenDialog';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -16,6 +17,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function PopupQuestionare() {
     const [open, setOpen] = useState(false);
+    const [openSecondModal, setOpenSecondModal] = React.useState(false);
   
     useEffect(() => {
       const timer = setTimeout(() => {
@@ -28,6 +30,13 @@ export default function PopupQuestionare() {
     const handleClose = () => {
       setOpen(false);
     };
+
+    const handleClickOpenSecondModal = () => {
+        setOpenSecondModal(true);
+    }
+    const handleCloseSecondModal = () => {
+        setOpenSecondModal(false);
+    }
   
   return (
     <React.Fragment>
@@ -46,9 +55,10 @@ export default function PopupQuestionare() {
         </DialogContent>
         <DialogActions>
             <MainButton text='Закрити' onClickHandler={handleClose}/>
-            <MainButton text='Пройти' onClickHandler={handleClose}/>
+            <MainButton text='Пройти' onClickHandler={handleClickOpenSecondModal}/>
         </DialogActions>
       </Dialog>
+      <FullScreenDialog open={openSecondModal} handleClose={handleCloseSecondModal}/>
     </React.Fragment>
   );
 }
