@@ -11,6 +11,8 @@ const HeroSection = () => {
     textAlign: "center",
     textTransform: "uppercase",
     position: "absolute",
+    opacity: 0,
+    animation: "fadeIn 2.5s ease-in-out forwards",
   };
   const buttonStyle = {
     width: "23.5rem",
@@ -55,6 +57,8 @@ const HeroSection = () => {
             display: "flex",
             alignItems: "flex-end",
             position: "relative",
+            opacity: 0,
+            animation: "fadeIn 2.5s ease-in-out forwards",
           }}
         >
           <div className="hero-salary-container">
@@ -68,7 +72,14 @@ const HeroSection = () => {
           <hr className="hero-hr" />
           <hr className="hero-hr1" />
         </div>
-        <MainButton text="почати навчання прямо зараз" sx={buttonStyle} />
+        <div
+          className="hero-button"
+          style={{
+            opacity: 0,
+          }}
+        >
+          <MainButton text="почати навчання прямо зараз" sx={buttonStyle} />
+        </div>
       </Grid>
     </Grid>
   );
