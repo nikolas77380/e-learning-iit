@@ -28,4 +28,42 @@ const overlayStyle = {
     background: "transparent",
   };
 
-  export {titleStyle, positionStyle, overlayStyle};
+  const textQuestionStyle = {
+    fontFamily: 'Montserrat',
+    fontSize: '1rem',
+    fontWeight: 700,
+    lineHeight: '30px',
+    textAlign: 'center',
+    color:'white',
+    margin:'0'
+  }
+  
+  const textStyle = {
+    fontFamily: 'Montserrat',
+    fontSize: '0.75rem',
+    fontWeight: 700,
+    lineHeight: '30px',
+    textAlign: 'left',
+    color:'white',
+    margin:'0'
+  }
+  
+  const titleQueastionareStyle = {
+    fontFamily: 'Montserrat',
+    fontSize: '2.5rem',
+    fontWeight: 700,
+    textAlign: 'center',
+    color:'white',
+    textTransform:'uppercase'
+  }
+  
+  const buttonStyle = {
+    minWidth:'35%'
+  }
+  
+  const radioStyle ={
+    width:'25px',
+    height:'25px'
+  }
+
+  export {titleStyle, positionStyle, overlayStyle, textQuestionStyle, titleQueastionareStyle, textStyle, buttonStyle, radioStyle};
