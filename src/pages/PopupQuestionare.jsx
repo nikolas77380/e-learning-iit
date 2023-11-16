@@ -36,6 +36,7 @@ export default function PopupQuestionare() {
     }
     const handleCloseSecondModal = () => {
         setOpenSecondModal(false);
+        setOpen(false);
     }
   
   return (

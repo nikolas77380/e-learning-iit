@@ -1,15 +1,16 @@
 import { Grid } from '@mui/material';
 import React, { useState } from 'react';
-import WhyComponents from './WhyComponents';
 import '../pages/style.css';
 import MainButton from './MainButton';
 import MainTitle from './MainTitle';
 import questions from '../constants/QuastionareText';
 import {textQuestionStyle, titleQueastionareStyle, textStyle, buttonStyle, radioStyle} from './styles';
 import results from '../constants/QuestionareResult';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 
-export default function Questionare() {  
+export default function Questionare({handleClose}) {  
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
@@ -19,10 +20,14 @@ export default function Questionare() {
   const handleAnswerChange = (questionId, option) => {
     setAnswers({ ...answers, [questionId]: option });
   };
-  console.log(answers);
 
   const handleNext = () => {
-    setCurrentQuestion(currentQuestion + 1);
+    if (answers[questions[currentQuestion].id])
+    {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      alert ('Будь-ласка, оберіть один варіант')
+    }
   };
 
   const handleBack = () => {
@@ -30,12 +35,11 @@ export default function Questionare() {
   }
 
   const handleSubmit = () => {
-    console.log('Answers:', answers);
     setIsResult(true);
   };
 
   return (
-    <Grid container direction='row' alignContent='center' justifyContent='center' sx={{backgroundColor:'#412B14', minHeight:'100vh'}}>
+    <Grid container direction='row' alignContent='center' justifyContent='center' sx={{backgroundColor:'#412B14', minHeight:'100vh', position:'relative'}}>
       <Grid container item xs={12} direction='row' justifyContent='center' alignContent='flex-start'>
           <MainTitle text='Чи IT то твоє?' sx={titleQueastionareStyle}/>
       </Grid>
@@ -102,6 +106,9 @@ export default function Questionare() {
           </Grid>
         </Grid>
         )}
+      <IconButton onClick={handleClose} sx={{position:'absolute', top:0, right:0}} aria-label="delete" size="large">
+        <CloseIcon fontSize="inherit" />
+      </IconButton>
     </Grid>
   );
 };
