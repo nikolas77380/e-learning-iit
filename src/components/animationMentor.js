@@ -12,8 +12,6 @@ export const useImageAnimation = () => {
         const isImageVisible =
           imageElement.getBoundingClientRect().top < window.innerHeight;
 
-        console.log("isImageVisible:", isImageVisible);
-
         if (isImageVisible && !isVisibleImage) {
           imageElement.style.opacity = 1;
           setIsVisibleImage(true);
@@ -43,10 +41,9 @@ export const useTextAnimation = () => {
         const isTextContainerVisible =
           textContainerElement.getBoundingClientRect().top < window.innerHeight;
 
-        console.log("isTextContainerVisible:", isTextContainerVisible);
-
         if (isTextContainerVisible && !isTextVisible) {
           textContainerElement.style.transform = "translateX(0)";
+          textContainerElement.style.opacity = 1;
           setIsTextVisible(true);
         }
       }
