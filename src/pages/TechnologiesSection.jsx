@@ -65,7 +65,7 @@ function TechnologiesSection() {
                         sx={titleStyle}/>
                       </Grid>
                     <Grid className='icons'container direction="row" justifyContent="center" alignItems="center" alignContent='center' marginTop='20px' >
-                        <Grid container  spacing={4} item xs={10} md={10} direction="row" justifyContent="center" alignItems="center" alignContent='center'>
+                        <Grid container  spacing={4} item xs={10} md={10} lg={8} direction="row" justifyContent="center" alignItems="center" alignContent='center'>
                             {iconLinks.map((link, index) => (
                                 <Grid container className='icon' key={index} item xs={4} sm={3} md={3} >
                                      <a  href={link.url} target="_blank">

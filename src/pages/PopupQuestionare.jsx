@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -7,7 +6,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import { useEffect, useState } from 'react';
-import {titleStyle, titleStyle2, nameStyle, positionStyle, paragrfStyle, shadowContainerStyle, gridTitleStyle} from './style'
+import {positionStyle} from './style'
 import MainButton from '../components/MainButton';
 import FullScreenDialog from '../components/FullScreenDialog';
 
@@ -40,7 +39,7 @@ export default function PopupQuestionare() {
     }
   
   return (
-    <React.Fragment>
+    <>
       <Dialog
         open={open}
         TransitionComponent={Transition}
@@ -60,6 +59,6 @@ export default function PopupQuestionare() {
         </DialogActions>
       </Dialog>
       <FullScreenDialog open={openSecondModal} handleClose={handleCloseSecondModal}/>
-    </React.Fragment>
+    </>
   );
 }
