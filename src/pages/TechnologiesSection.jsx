@@ -2,15 +2,15 @@ import React from "react";
 import "./style.css";
 import { Grid, Typography } from "@mui/material";
 import MainTitle from "../components/MainTitle";
-import bootstrap from "../images/icons/bootstrap_icon.png";
-import css from "../images/icons/css3_icon.png";
-import git from "../images/icons/git_square_icon.png";
-import github from "../images/icons/github2.png";
-import html from "../images/icons/html_icon.png";
-import mui from "../images/icons/mui3.png";
-import react from "../images/icons/react_icon.png";
-import js from "../images/icons/javascript_icon.png";
+import css from "../images/icons/cssIcon.svg";
+import git from "../images/icons/gitIcon.svg";
+import github from "../images/icons/githubIcon.svg";
+import html from "../images/icons/htmlIcon.svg";
+import mui from "../images/icons/muiIcon.svg";
+import react from "../images/icons/reactIcon.svg";
+import js from "../images/icons/jsIcon.svg";
 import image from "../images/technologies.JPG";
+import bootstrap from "../images/icons/bootstrapIcon.svg";
 
 const iconLinks = [
   { url: "https://git-scm.com", icon: git },
@@ -31,10 +31,11 @@ const mainImageStyle = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  position: "relative",
 };
 
 const titleStyle = {
-  fontSize: "3rem",
+  fontSize: "3.5rem",
   fontFamily: "Montserrat",
   fontWeight: "700",
   lineHeight: "5.3125rem",
@@ -42,20 +43,25 @@ const titleStyle = {
   textAlign: "center",
   color: "white",
   textTransform: "uppercase",
+  margin: "auto",
 };
 
 function TechnologiesSection() {
   return (
-    <Grid container xs={12} md={12} style={mainImageStyle}>
+    <Grid className="1" container xs={12} md={12} style={mainImageStyle}>
       <Grid
+        className="2"
         item
         xs={12}
+        md={12}
         sx={{
+          display: "flex",
           backgroundColor: " rgba(0, 0, 0, 0.3)",
-          height: "100%",
+          height: "100vh",
         }}
       >
         <Grid
+          className="3"
           container
           item
           xs={12}
@@ -63,12 +69,20 @@ function TechnologiesSection() {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid container item md={6} margin="20px 0">
+          <Grid
+            className="title"
+            container
+            item
+            xs={11}
+            md={8}
+            xl={10}
+            display="flex"
+          >
             <MainTitle text={"Які технології Ви вивчите"} sx={titleStyle} />
           </Grid>
           <Grid
+            className="icons"
             container
-            spacing={3}
             direction="row"
             justifyContent="center"
             alignItems="center"
@@ -77,13 +91,15 @@ function TechnologiesSection() {
           >
             <Grid
               container
-              spacing={3}
+              spacing={4}
               item
-              xs={8}
+              xs={10}
               md={10}
+              lg={8}
               direction="row"
               justifyContent="center"
               alignItems="center"
+              alignContent="center"
             >
               {iconLinks.map((link, index) => (
                 <Grid
@@ -92,20 +108,14 @@ function TechnologiesSection() {
                   key={index}
                   item
                   xs={4}
+                  sm={3}
                   md={3}
-                  direction="row"
-                  justifyContent="center"
-                  alignItems="center"
                 >
                   <a href={link.url} target="_blank">
                     <img
                       src={link.icon}
                       alt={`Icon ${link.icon}`}
-                      style={{
-                        width: "100%",
-                        display: "block",
-                        margin: "0 auto",
-                      }}
+                      style={{ width: "90%", display: "block" }}
                     />
                   </a>
                 </Grid>

@@ -15,6 +15,7 @@ import PricesSection from "../pages/PricesSection";
 import FooterSection from "../pages/FooterSection";
 import FooterSection2 from "../pages/FooterSection2";
 import MentorSection from "../pages/MentorSection";
+import PopupQuestionare from "../pages/PopupQuestionare";
 
 function Main() {
   const { scrollYProgress } = useScroll();
@@ -60,6 +61,7 @@ function Main() {
       <Grid item xs={12} md={12}>
         <FooterSection2 />
       </Grid>
+      <PopupQuestionare/>
     </Grid>
   );
 }
