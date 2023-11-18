@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Grid } from "@mui/material";
 import MainTitle from "../components/MainTitle";
 import "./style.css";
@@ -27,6 +27,25 @@ const SalarySection = () => {
     fontSize: "2.4rem",
     lineHeight: "3.0475rem",
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      const salaryElements = document.querySelectorAll(".salary-block");
+
+      salaryElements.forEach((element, index) => {
+        if (element.getBoundingClientRect().top < window.innerHeight) {
+          setTimeout(() => {
+            element.classList.add("visible");
+          }, index * 700);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <Grid
       container

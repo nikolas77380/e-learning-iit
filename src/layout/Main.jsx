@@ -1,5 +1,7 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
+import { motion, useScroll } from "framer-motion";
+import "../pages/style";
 
 import TechnologiesSection from "../pages/TechnologiesSection";
 import FeedbackSection from "../pages/FeedbackSection";
@@ -16,8 +18,13 @@ import MentorSection from "../pages/MentorSection";
 import PopupQuestionare from "../pages/PopupQuestionare";
 
 function Main() {
+  const { scrollYProgress } = useScroll();
   return (
     <Grid container>
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
       <Grid item xs={12} md={12}>
         <HeroSection />
       </Grid>

@@ -1,3 +1,7 @@
+:root {
+  --orange: #e8511c;
+}
+
 /* EL2-why-section.css */
 .why-page {
   background-color: #412b14;
@@ -16,6 +20,14 @@
   margin: 1rem;
   width: 10rem;
   min-height: 9rem;
+  opacity: 0;
+  transform: translateX(-17.625rem);
+  transition: opacity 3.5s, transform 1.5s;
+}
+
+.block.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .blockText {
@@ -106,6 +118,14 @@
   height: 12rem;
   min-height: 9rem;
   align-content: center;
+  opacity: 0;
+  transform: translateX(-800px);
+  transition: opacity 0.1s, transform 2s;
+}
+
+.salary-block.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 .salaryPar {
   color: #e8511c;
@@ -143,6 +163,90 @@
   background-color: #e8511c !important;
   height: 0.7rem !important;
   width: 0.7rem !important;
+}
+
+/* animation */
+.progress-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+  background: var(--orange);
+  bottom: 0;
+  z-index: 1;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero-button {
+  animation: fadeIn 3.5s ease-in-out forwards,
+    slideInFromRight 4.5s ease-in-out forwards;
+}
+
+/* mentor*/
+
+.animate-image {
+  opacity: 0;
+  transition: opacity 6s;
+}
+
+.animate-text {
+  opacity: 0;
+  transform: translateX(-10%);
+  transition: transform 4s, opacity 6s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px) rotate(5deg);
+  }
+  50% {
+    transform: translateX(5px) rotate(-5deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(5deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.icon:hover {
+  animation: shake 0.5s infinite;
 }
 
 @media (max-width: 600px) {
