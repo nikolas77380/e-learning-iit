@@ -39,7 +39,7 @@ export default function Questionare({handleClose}) {
   };
 
   return (
-    <Grid container direction='row' alignContent='center' justifyContent='center' sx={{backgroundColor:'#412B14', minHeight:'100vh', position:'relative'}}>
+    <Grid container item md={12} direction='row' alignContent='center' justifyContent='center' sx={{backgroundColor:'#412B14', height:'100%', position:'relative', padding:{md:'20px'}}}>
       <Grid container item xs={12} direction='row' justifyContent='center' alignContent='flex-start'>
           <MainTitle text='Чи IT то твоє?' sx={titleQueastionareStyle}/>
       </Grid>
@@ -59,21 +59,21 @@ export default function Questionare({handleClose}) {
             </Grid>
         </Grid>
         ) : (
-          <Grid container item xs={11} sm={8} md={6} spacing={1} key={questions[currentQuestion]} >
-          <Grid container item>
-              <Grid
-              item
-              xs={12}
-              className="block"
-              style={{
-                  display: "flex",
-                  margin: "1rem",
-                  alignContent: "center",
-              }}
-              >
-              <span style={textQuestionStyle}>{questions[currentQuestion].text}</span>
-              </Grid>
-          </Grid>
+          <Grid container item xs={11} sm={8} md={12} spacing={1} key={questions[currentQuestion]} >
+            <Grid container item>
+                <Grid
+                item
+                xs={12}
+                className="block"
+                style={{
+                    display: "flex",
+                    margin: "1rem",
+                    alignContent: "center",
+                }}
+                >
+                <span style={textQuestionStyle}>{questions[currentQuestion].text}</span>
+                </Grid>
+            </Grid>
           <Grid container item xs={11} direction='row' alignContent='center' justifyContent='center' sx={{margin:'auto'}}>
               <form>
               {questions[currentQuestion].options.map((option, index) => (
