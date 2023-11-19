@@ -3,7 +3,7 @@ import {Grid} from "@mui/material";
 import Avatar from '@mui/material/Avatar';
 import {Typography} from "@mui/material";
 import { useState } from "react";
-import ModalVide from "./ModalVideo";
+import ModalVideo from "./ModalVideo";
 import {titleStyle, positionStyle, overlayStyle} from './styles'
 
 
@@ -44,7 +44,7 @@ export default function VideoPlayer({videoid, img, name, position}) {
                     {position}
                 </p>
             </Grid>
-            <ModalVide videoid={videoid} open={open} handleClose={handleClose}/>
+            <ModalVideo videoid={videoid} open={open} handleClose={handleClose}/>
          </div>         
     )
 }
