@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, useTheme } from "@mui/material";
+import { Grid } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";

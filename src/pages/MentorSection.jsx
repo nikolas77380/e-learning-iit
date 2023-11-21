@@ -87,9 +87,16 @@ export default function MentorSection() {
             <h3 style={nameStyle}>Микола Кіпняк</h3>
             <p style={positionStyle}>Senior Full-stack engineer</p>
             <p style={paragrfStyle}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
+              10 років досвіду у розробці. Сам навчався вдома програмуванню і
+              пройшов шлях від маленької контори із зарплатою в 500 гривень до
+              зарплати <strong style={{ color: "red" }}>14000$</strong> на
+              місяць. За 10 років встих попрацювати:
+              <ul>
+                <li>невеликих аутсорс компаніях</li>
+                <li>на фрілансі</li>
+                <li>у стартапах</li>
+                <li>у топових компаніях України</li>
+              </ul>
             </p>
           </Grid>
           <Grid

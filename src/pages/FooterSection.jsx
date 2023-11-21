@@ -1,11 +1,8 @@
 import React from "react";
-import { Grid, Link, useMediaQuery, useTheme } from "@mui/material";
+import { Grid, Link } from "@mui/material";
 import MainButton from "../components/MainButton";
 
 const FooterSection = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
   const containerStyle = {
     alignContent: "center",
     padding: "1.5rem",
