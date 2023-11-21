@@ -1,7 +1,7 @@
 import React from "react";
 import CustomAccordion from "../components/CustomAccordion";
 import FaqText from "../constants/FaqText";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import MainButton from "../components/MainButton";
 import MainTitle from "../components/MainTitle";
 

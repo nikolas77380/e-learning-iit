@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import MainTitle from "../components/MainTitle";
 import css from "../images/icons/cssIcon.svg";
 import git from "../images/icons/gitIcon.svg";
@@ -111,7 +111,7 @@ function TechnologiesSection() {
                   sm={3}
                   md={3}
                 >
-                  <a href={link.url} target="_blank">
+                  <a href={link.url} target="_blank" rel="noreferrer">
                     <img
                       src={link.icon}
                       alt={`Icon ${link.icon}`}

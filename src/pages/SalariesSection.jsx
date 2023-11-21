@@ -22,11 +22,6 @@ const SalarySection = () => {
     height: "12rem",
     alignContent: "center",
   };
-  const salaryPar = {
-    color: "#E8511C",
-    fontSize: "2.4rem",
-    lineHeight: "3.0475rem",
-  };
   useEffect(() => {
     const handleScroll = () => {
       const salaryElements = document.querySelectorAll(".salary-block");

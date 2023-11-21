@@ -1,7 +1,7 @@
 import React from "react";
-import Modal from '@mui/material/Modal';
-import CloseIcon from '@mui/icons-material/Close';
-import Button from '@mui/material/Button';
+import Modal from "@mui/material/Modal";
+import CloseIcon from "@mui/icons-material/Close";
+import Button from "@mui/material/Button";
 import { Grid } from "@mui/material";
 import { red } from '@mui/material/colors';
 
@@ -15,8 +15,7 @@ export default function ModalVideo ({videoid, open, handleClose}) {
         paddingTop:'56.25%',
         backroud:'none'
       };
-
-    return(
+  return (
     <Modal
         open={open}
         onClose={handleClose}
@@ -33,7 +32,6 @@ export default function ModalVideo ({videoid, open, handleClose}) {
                         allowFullScreen />
             </Grid>
         </Grid>
-            
     </Modal>
-    )
+  );
 }
